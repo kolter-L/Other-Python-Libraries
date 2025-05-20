@@ -1,0 +1,17 @@
+<h1>Test Coverage Report</h1>
+
+{% for project in projects %}
+<h2>{{ project.project_name }} ({{ project.project_key }})</h2>
+{% for issue in project.issues %}
+  <p><strong>{{ issue.key }}</strong>: {{ issue.summary }}</p>
+  {% if issue.test_cases %}
+    <ul>
+      {% for tc in issue.test_cases %}
+        <li>{{ tc.title }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p><em>No test cases linked.</em></p>
+  {% endif %}
+{% endfor %}
+{% endfor %}
