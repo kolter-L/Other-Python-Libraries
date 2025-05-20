@@ -1,10 +1,10 @@
 import requests
 from Models.TestCase import TestCase
+import os
 
-# --- TestRail Credentials ---
-TESTRAIL_DOMAIN = "kolter.testrail.io"
-TESTRAIL_EMAIL = "kolter.leisy2003@gmail.com"
-TESTRAIL_API_KEY = "cJ2N6lRz38xHeAKqBNAJ-2mt2zCtSXGbie1UBA/AB"
+TESTRAIL_DOMAIN = os.environ["TESTRAIL_DOMAIN"]
+TESTRAIL_EMAIL = os.environ["TESTRAIL_EMAIL"]
+TESTRAIL_API_KEY = os.environ["TESTRAIL_API_KEY"]
 
 BASE_URL = f"https://{TESTRAIL_DOMAIN}/index.php?/api/v2"
 AUTH = (TESTRAIL_EMAIL, TESTRAIL_API_KEY)

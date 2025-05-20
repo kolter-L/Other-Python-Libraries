@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from API.JiraAPIClient import get_jira_projects
 from API.TestRailAPIClient import get_all_test_cases
 from Services.JiraProjectService import JiraProjectService
