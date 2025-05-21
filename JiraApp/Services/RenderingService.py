@@ -11,8 +11,13 @@ def render_confluence_report(projects, output_path="test_report.html"):
     # Render the template with your data
     html_output = template.render(projects=projects)
 
+    # Un-comment if you want to write the file out for debugging purposes
+    '''
     # Write to file
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_output)
 
     print(f"✅ Report written to: {output_path}")
+    '''
+    return html_output
+
