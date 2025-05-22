@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  run-my-script:
+    docker:
+      - image: cimg/python:3.11  # Use your preferred image
+    steps:
+      - checkout
+      - run:
+          name: Say Hello
+          command: echo "Hello from a manual job!"
+
+workflows:
+  manual-run:
+    jobs:
+      - run-my-script:
+          type: approval
