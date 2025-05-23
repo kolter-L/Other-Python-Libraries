@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  debug-test:
+    docker:
+      - image: python:3.11-slim
+    steps:
+      - checkout
+      - run:
+          name: Echo something
+          command: |
+            echo "✅ Hello from CircleCI!"
+            python --version
+            exit 1
+
+workflows:
+  test:
+    jobs:
+      - debug-test

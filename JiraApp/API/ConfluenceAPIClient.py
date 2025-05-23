@@ -23,7 +23,7 @@ def push_to_confluence_page(html_content, parent_id=None):
 
     payload = {
         "type": "page",
-        "title": f"Test Cases Summary: {DATE_TIME.strftime("%m-%d @ %H:%M")}",
+        "title": f"Test Cases Summary: {DATE_TIME.strftime('%m-%d @ %H:%M')}",
         "space": {"key": CONFLUENCE_SPACE},
         "body": {
             "storage": {
