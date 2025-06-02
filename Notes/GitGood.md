@@ -28,6 +28,18 @@ To pull from this other repo:
 
 ## GIT: Bitbucket as remote repo
 
-You need to add an app password by going to [text](https://bitbucket.org/account/settings/)
+You need to add an app password by going to [This Link](https://bitbucket.org/account/settings/)
 
 You can use this when pushing to the repo
+
+You can also configure your repo to use SSH which is better -> [SSH on Mac](https://support.atlassian.com/bitbucket-cloud/docs/set-up-personal-ssh-keys-on-macos/)
+
+## GIT: How to change the name of a directory (When it does not seem to be working)
+
+DO NOT DO THIS: `** just changes the name of the directory in VS Code by clicking on it (stupid) **`
+
+This will result in git tracking both the new and old directories. It will push the new one with the rename, and both will end up in your remote repo (duplicates).
+
+Instead, do this: `git mv <old_file_name> <new_file_name>`
+
+This will move the files to the new file and avoid all the misfortunes of the first method of renaming
